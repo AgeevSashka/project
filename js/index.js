@@ -12,4 +12,11 @@ const lastFilm = prompt("Один из последних просмотренн
     anyLastFilm = prompt("Один из последних просмотренных фильмов?", ""),
     anyHisOc = +prompt("На сколько оцените его?", "");
 
-console.log(`Первый фильм ${lastFilm} и его оценка ${hisOc}, второй фильм ${anyLastFilm} и его оценка ${anyHisOc}`);
+const movies = {
+    lastFilm: hisOc,
+    anyLastFilm: anyHisOc
+};
+
+console.log(movies.lastFilm);
+console.log(movies.anyLastFilm);
+console.log(movies);
