@@ -7,16 +7,21 @@ const personalMovieDB = {
     genres: [],
     privat: false
 };
-const lastFilm = prompt("Один из последних просмотренных фильмов?", ""),
-    hisOc = +prompt("На сколько оцените его?", ""),
-    anyLastFilm = prompt("Один из последних просмотренных фильмов?", ""),
-    anyHisOc = +prompt("На сколько оцените его?", "");
-
-const movies = {
-    lastFilm: hisOc,
-    anyLastFilm: anyHisOc
-};
-
-console.log(movies.lastFilm);
-console.log(movies.anyLastFilm);
-console.log(movies);
+let i = 0;
+while (i < 2) {
+    const a = prompt("Один из последних просмотренных фильмов?", ""),
+        b = +prompt("На сколько оцените его?", "");
+    i++;
+    if(a != null && b != null && a != '' && b != "" && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+    } else {
+        i--;
+    }
+}
+if( personalMovieDB.count < 10) {
+    alert("Можно еще пару фильмов глянуть");
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+    alert("Самое оно");
+} else if (personalMovieDB.count > 30) {
+    alert("Старик да ты киноман");
+}
