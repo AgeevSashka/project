@@ -1,14 +1,5 @@
-const a = 42;
-switch (a) {
-    case 42:
-        console.log("No!")
-        break;
-    case 50:
-        console.log("Another no!");
-        break;
-    case 52:
-        console.log('Good!!');
-        break;
-    default:
-        break;
-}
+const a = "hello, my name is Sasha";
+const b = a.slice(0,5);
+
+let i = [];
+ console.log(b);
